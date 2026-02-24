@@ -29,10 +29,23 @@ function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(`Subscribed with email: ${email}`);
-    setEmail('');
+    try {
+      const response = await fetch('https://formspree.io/f/mdalprpn', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      if (response.ok) {
+        alert('Thanks for subscribing! 🎉');
+        setEmail('');
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      alert('Something went wrong. Please try again.');
+    }
   };
 
   const getArticle = (role) => {
