@@ -34,12 +34,11 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename="/alexleu-ai/">
+    <BrowserRouter basename="/">
       <div className="app">
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/alexleu-ai/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/articles/:slug" element={<ArticleView />} />

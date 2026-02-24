@@ -5,7 +5,6 @@ function BlogList() {
   const posts = [
     { date: '4 Feb 2026', title: 'The Rise of Agentic Programming: When Code Writes Itself', slug: 'agentic-programming-article' },
     { date: '15 Jan 2026', title: 'Why I Fell in Love with Neovim (And You Might Too)', slug: 'neovim-article' },
-    { date: '14 Dec 2025', title: '2025 Year in Review', slug: 'year-review' },
   ];
 
   return (

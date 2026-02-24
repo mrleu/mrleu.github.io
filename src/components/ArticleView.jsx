@@ -9,7 +9,7 @@ function ArticleView() {
   useEffect(() => {
     const loadArticle = async () => {
       try {
-        const response = await fetch(`/alexleu-ai/posts/${slug}.md`);
+        const response = await fetch(`/posts/${slug}.md`);
         const text = await response.text();
         setContent(text);
       } catch (error) {
